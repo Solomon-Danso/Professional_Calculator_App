@@ -4,34 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="100dp"
+    >
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Make Money"
-    android:layout_marginLeft="50dp"
-   android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    android:layout_centerInParent="true"
-    android:textSize="20sp"
-    android:textStyle="bold|italic"
-    android:textColor="@color/material_dynamic_neutral70"
-    android:id="@+id/money1"
-
-    />
-
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/money1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Save"
-       android:background="@color/red"
+        android:layout_centerInParent="true"
+        android:hint="Name: "
         android:textColor="@color/red"
-        android:onClick="func1"
+        android:textSize="20sp"
+        android:lines="4"
+        android:inputType="number"
+
         />
 
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:id="@+id/btn1"
+    android:text="Click Me"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:onClick="clickMe"
+    android:layout_below="@+id/edit1"
+    android:layout_marginTop="20dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt1"
+        android:text="Hello"
+        android:layout_below="@+id/btn1"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+      android:textSize="20dp"
+
+
+        />
 
 </RelativeLayout>
