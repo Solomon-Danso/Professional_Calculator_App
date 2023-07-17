@@ -173,3 +173,40 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
+Chapter 3
+User Interface 
+
+- Change the constraint layout to relative layout 
+- The colors must be in hexadecimal form and must be initialized in the colors.xml  file
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
