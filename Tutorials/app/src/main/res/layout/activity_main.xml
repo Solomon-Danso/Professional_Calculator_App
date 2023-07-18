@@ -5,44 +5,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="100dp"
+    android:padding="2dp"
     >
 
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Name: "
-        android:textColor="@color/red"
-        android:textSize="20sp"
-        android:lines="4"
-        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/checker"
+
+        >
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harry"
+        android:id="@+id/Harry"
+        android:checked="true"
+
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sweety"
+        android:id="@+id/Sweety"
+        android:checked="false"
+        android:layout_toRightOf="@+id/Harry"
+        android:layout_marginLeft="10dp"
+
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baby"
+        android:id="@+id/Baby"
+        android:checked="false"
+        android:layout_toRightOf="@+id/Sweety"
+        android:layout_marginLeft="10dp"
+
+        />
+    </RelativeLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checker"
+        android:orientation="horizontal"
+        android:id="@+id/rdGroup"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Single"
+            android:id="@+id/rbSingle"
+            android:checked="true"
+
+
+            />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Married"
+        android:id="@+id/rbMarried"
+
 
         />
 
-<Button
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="In a Relationship"
+            android:id="@+id/rbRel"
+
+
+            />
+
+    </RadioGroup>
+
+<ProgressBar
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_below="@+id/rdGroup"
     android:layout_centerInParent="true"
-    android:id="@+id/btn1"
-    android:text="Click Me"
-    android:textStyle="bold"
-    android:textSize="20sp"
-    android:onClick="clickMe"
-    android:layout_below="@+id/edit1"
     android:layout_marginTop="20dp"
+    android:id="@+id/progBar"
+    android:visibility="gone"
+
+
     />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ProgressBar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt1"
-        android:text="Hello"
-        android:layout_below="@+id/btn1"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-      android:textSize="20dp"
+        android:layout_below="@+id/rdGroup"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/progBar2"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
 
 
         />
