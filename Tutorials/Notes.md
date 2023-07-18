@@ -1,7 +1,10 @@
-Chapter 5 
-- The switch in the View interface will give an error, change it to an if else statement 
-- protected void onCreate(Bundle savedInstanceState) this will be where all the ui element will be initialised
-- In the right way, we will initialised the variables first then use it like the example below
+Chapter 6 
+LAYOUTS 
+
+- Relative Layouts means every ui element is related to each other 
+- With linear layout, all the ui will be placed Line After Line 
+
+# Relative Layout 
 
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -11,96 +14,160 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity"
-android:padding="10dp"
+android:padding="2dp"
 >
-<EditText
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:hint="Enter Your Details"
-android:layout_centerHorizontal="true"
-android:layout_centerVertical="true"
-android:id="@+id/edit1"
-/>
 
-<Button
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checker"
+        android:orientation="horizontal"
+        android:id="@+id/rdGroup"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Single"
+            android:id="@+id/rbSingle"
+            android:checked="true"
+
+
+            />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Married"
+        android:id="@+id/rbMarried"
+
+
+        />
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="In a Relationship"
+            android:id="@+id/rbRel"
+
+
+            />
+
+    </RadioGroup>
+
+<ProgressBar
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:text="Submit"
-android:id="@+id/Clicker"
-android:layout_below="@+id/edit1"
-android:layout_marginTop="10dp"
-android:layout_centerHorizontal="true"
-android:background="@color/black"
-android:textColor="@color/white"
-android:textSize="20sp"
+android:layout_below="@+id/rdGroup"
+android:layout_centerInParent="true"
+android:layout_marginTop="20dp"
+android:id="@+id/progBar"
+android:visibility="gone"
 
 
     />
 
-    <TextView
+    <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Clicker"
-        android:textColor="@color/red"
-        android:text="The Text"
-        android:textAlignment="center"
-        android:layout_marginTop="10dp"
-        android:id="@+id/txt1"
+        android:layout_below="@+id/rdGroup"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/progBar2"
+        android:visibility="VISIBLE"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+
+        android:max="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
 
 
         />
 
 </RelativeLayout>
 
-package com.hydotgroup.tutorials;
 
-import androidx.appcompat.app.AppCompatActivity;
+# Linear Layout 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:orientation="horizontal"
+>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Hello Text"
+android:id="@+id/Hello"
+android:background="@color/black"
+android:layout_weight="20"
+/>
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bingo Bar"
+        android:id="@+id/Bingo"
+        android:background="@color/red"
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-//Declaration Location
-public TextView text1;
-public EditText edit1;
-public Button btn1;
-
-// Usage Location
-@Override
-public void onClick(View v) {
-int id = v.getId();
-if(id==R.id.Clicker){
-text1.setText(edit1.getText());
-Toast.makeText(this, "You have Clicked Me", Toast.LENGTH_SHORT).show();
-}
-}
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        //Instantiate Location
-
-        text1 = findViewById(R.id.txt1);
-        text1.setOnClickListener(this);
-
-        edit1 = findViewById(R.id.edit1);
-        edit1.setOnClickListener(this);
-
-        btn1 = findViewById(R.id.Clicker);
-        btn1.setOnClickListener(this);
+        android:layout_weight="80"
+        />
 
 
-
-    }
-
+</LinearLayout>
 
 
+# Constraint Layout 
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="2dp"
+tools:context=".MainActivity">
 
-}
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="179dp"
+        android:layout_height="98dp"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        tools:layout_editor_absoluteY="675dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

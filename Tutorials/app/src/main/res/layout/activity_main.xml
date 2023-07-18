@@ -1,122 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:padding="2dp"
-    >
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/checker"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
 
-        >
-
-    <CheckBox
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Harry"
-        android:id="@+id/Harry"
-        android:checked="true"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.228" />
 
-        />
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sweety"
-        android:id="@+id/Sweety"
-        android:checked="false"
-        android:layout_toRightOf="@+id/Harry"
-        android:layout_marginLeft="10dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="179dp"
+        android:layout_height="98dp"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        tools:layout_editor_absoluteY="675dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        />
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Baby"
-        android:id="@+id/Baby"
-        android:checked="false"
-        android:layout_toRightOf="@+id/Sweety"
-        android:layout_marginLeft="10dp"
-
-        />
-    </RelativeLayout>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/checker"
-        android:orientation="horizontal"
-        android:id="@+id/rdGroup"
-        >
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:text="Single"
-            android:id="@+id/rbSingle"
-            android:checked="true"
-
-
-            />
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="Married"
-        android:id="@+id/rbMarried"
-
-
-        />
-
-
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:text="In a Relationship"
-            android:id="@+id/rbRel"
-
-
-            />
-
-    </RadioGroup>
-
-<ProgressBar
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/rdGroup"
-    android:layout_centerInParent="true"
-    android:layout_marginTop="20dp"
-    android:id="@+id/progBar"
-    android:visibility="gone"
-
-
-    />
-
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rdGroup"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/progBar2"
-        android:visibility="visible"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:max="100"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-
-        />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
