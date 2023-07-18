@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/shirt1"
-        android:label="HydotLearn"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/shirt1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tutorials"

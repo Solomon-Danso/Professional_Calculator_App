@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Tutorials</string>
+    <string name="app_name">Hydroid</string>
+    <string-array name="student">
+        <item>Solo</item>
+        <item>Baby</item>
+        <item>Sweety</item>
+        <item>Shelly</item>
+    </string-array>
 </resources>
