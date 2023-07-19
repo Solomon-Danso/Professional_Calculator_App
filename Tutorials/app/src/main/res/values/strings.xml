@@ -6,4 +6,5 @@
         <item>Sweety</item>
         <item>Shelly</item>
     </string-array>
+    <string name="hello">Hello</string>
 </resources>

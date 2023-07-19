@@ -24,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     //Declaration Location
    private ListView CitiesList;
    private Spinner studentSpinner, staticStudentSpinnerr;
+   private TextView txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        txt = findViewById(R.id.txt);
+        txt.setText(getString(R.string.hello));
 
 
         studentSpinner = findViewById(R.id.studentSpiinner);

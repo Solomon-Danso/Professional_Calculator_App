@@ -1,4 +1,6 @@
-Chapter 8 
-ListView and Spinners 
+Chapter 9
+DIFFERENT XML FILES 
+When you use the strings.xml, you can change you application for different users to use it.
+Right click on values>new> Values resource file
 
-- There are more modern approach since nobody uses listview now adays 
+Colours.xml contains all the colors in hex format
