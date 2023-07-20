@@ -1,18 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    android:padding="10dp"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="right|center"
+        android:text="0"
+        android:textColor="@color/theZero"
+        android:textSize="50dp"
+        android:id="@+id/theZero"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/theZero"
+        android:layout_marginTop="20dp"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5pt"
+            >
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="AC"
+                android:backgroundTint="@color/light_grey"
+                android:textColor="@color/deep_grey"
+                android:textSize="25dp"
+                android:id="@+id/Ac"
+                android:onClick="ACEvent"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="+/-"
+                android:backgroundTint="@color/light_grey"
+                android:textColor="@color/deep_grey"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/PlusMinus"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="%"
+                android:backgroundTint="@color/light_grey"
+                android:textColor="@color/deep_grey"
+                android:textSize="25dp"
+                android:id="@+id/percent"
+                android:onClick="thePercent"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="/"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:onClick="operationEvent"
+                android:id="@+id/divide"
+                android:layout_margin="1.0pt"
+                />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5pt"
+            >
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="7"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:onClick="numberEvent"
+                android:textSize="25dp"
+                android:id="@+id/num7"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="8"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:onClick="numberEvent"
+                android:textSize="25dp"
+                android:id="@+id/num8"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="9"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num9"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="X"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/white"
+
+                android:textSize="25dp"
+                android:onClick="operationEvent"
+                android:id="@+id/multiply"
+                android:layout_margin="1.0pt"
+                />
+
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5pt"
+            >
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="4"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num4"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="5"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:onClick="numberEvent"
+                android:textSize="25dp"
+                android:id="@+id/num5"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="6"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:onClick="numberEvent"
+                android:textSize="25dp"
+                android:id="@+id/num6"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="-"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:onClick="operationEvent"
+                android:id="@+id/subtract"
+                android:layout_margin="1.0pt"
+                />
+
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5pt"
+            >
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="1"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num1"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="2"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num2"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="3"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num3"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="+"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/white"
+                android:onClick="operationEvent"
+                android:textSize="25dp"
+                android:id="@+id/plus"
+                android:layout_margin="1.0pt"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5pt"
+            >
+
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="0"
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/num0"
+                android:layout_margin="1.0pt"
+                android:layout_weight="1"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="."
+                android:backgroundTint="@color/deep_grey"
+                android:textColor="@color/numColor"
+                android:textSize="25dp"
+                android:onClick="numberEvent"
+                android:id="@+id/dot"
+                android:layout_margin="1.0pt"
+                />
+            <Button
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:text="="
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:id="@+id/equals"
+                android:onClick="equalEvent"
+                android:layout_margin="1.0pt"
+                />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+
+</RelativeLayout>
