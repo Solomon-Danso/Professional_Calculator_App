@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText ed1;
     String op = "+";
-   String oldNumber = "";
+    String oldNumber = "";
     boolean isNewOp = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         if(op =="+"){
             result = Double.parseDouble( oldNumber) + Double.parseDouble(newNumber);
         }
-       else if(op =="-"){
+        else if(op =="-"){
             result = Double.parseDouble( oldNumber) - Double.parseDouble(newNumber);
         }
 

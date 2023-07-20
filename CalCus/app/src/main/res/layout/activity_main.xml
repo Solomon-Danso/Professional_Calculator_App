@@ -13,7 +13,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="@string/title"
-      android:paddingTop="20dp"
+       android:paddingTop="20dp"
        android:textSize="30dp"
        android:textColor="@color/white"
        android:paddingBottom="5dp"
@@ -21,7 +21,7 @@
        android:id="@+id/title"
 
 
-/>
+       />
 
    <EditText
        android:id="@+id/theZero"
@@ -41,7 +41,7 @@
    <TableLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-      android:layout_below="@+id/theZero"
+       android:layout_below="@+id/theZero"
        android:layout_marginTop="10dp"
        android:id="@+id/theTable"
        >
