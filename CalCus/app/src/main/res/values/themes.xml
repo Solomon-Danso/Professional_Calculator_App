@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.CalCus" parent="Base.Theme.CalCus" />
+
+    <style name="splashScreem" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <item name="android:windowBackground">@drawable/calcus</item>
+
+    </style>
 </resources>
